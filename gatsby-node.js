@@ -1,10 +1,8 @@
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type hasura_parties implements Node @dontInfer {
-      id: Int!,
-      name: String!,
-      idToString: String,
+    type hasura_parties implements Node {
+      idToString: String
     }
   `
   createTypes(typeDefs)
